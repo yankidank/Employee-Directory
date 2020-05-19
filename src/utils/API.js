@@ -15,11 +15,11 @@ export default {
             image: user.picture.large,
             age: user.dob.age,
             registered: user.registered,
-/*             location: {
+            location: {
               city: user.location.city,
               state: user.location.state,
               country: user.location.country,  
-            } */
+            }
           };
         });
         resolve(results);

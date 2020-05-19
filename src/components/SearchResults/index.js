@@ -1,17 +1,27 @@
 import React from "react";
+import Card from "../Card";
 import "./style.css";
 
 function SearchResults(props) {
   return (
-    <ul className="list-group search-results">
-      {props.results.map(result => (
-        <li key={result.id} className="list-group-item">
-          <h2>{result.firstname} {result.lastname}</h2>
-          <h3>{result.email}</h3>
-          <img alt="Employee" src={result.image} className="img-fluid" />
-        </li>
-      ))}
-    </ul>
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Image</th>
+          <th scope="col">First</th>
+          <th scope="col">Last</th>
+          <th scope="col">Email</th>
+          <th scope="col">Age</th>
+          <th scope="col">Location</th>
+        </tr>
+      </thead>
+      <tbody>
+        {props.results.map(result => (
+          <Card props={result} key={result.id} />
+        ))}
+      </tbody>
+    </table>
   );
 }
 

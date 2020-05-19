@@ -1,3 +1,6 @@
 ul.search-results img {
   margin: 0 auto;
 }
+tbody tr th {
+  font-weight: 400;
+}
