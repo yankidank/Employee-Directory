@@ -7,7 +7,7 @@ function Navbar() {
   return (
     <div class="container">
 
-      <nav className="navbar navbar-expand-lg navbar-light bg-light">
+      <nav className="navbar navbar-expand-lg navbar-dark bg-dark justify-content-between">
         <Link className="navbar-brand" to="/">
           Employee Directory
         </Link>
@@ -15,7 +15,7 @@ function Navbar() {
           <ul class="navbar-nav">
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Filter 
+                Sort 
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                 <a class="dropdown-item" href="#">First Name</a>
@@ -25,6 +25,10 @@ function Navbar() {
                 <a class="dropdown-item" href="#">Location</a>
               </div>
             </li>
+            <form class="form-inline">
+              <input class="form-control mr-sm-2" type="search" placeholder="Employee Name" aria-label="Search" />
+              <button class="btn btn-primary my-2 my-sm-0" type="submit">Search</button>
+            </form>
           </ul>
         </div>
       </nav>
